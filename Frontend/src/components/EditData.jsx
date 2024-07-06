@@ -14,7 +14,7 @@ const EditData = () => {
 
 
       function editEmployee() {
-           axiosInstance.put( 'http://localhost:3000/admin/update',data).then((res)=>{
+           axiosInstance.put( 'https://employee-app-server-delta.vercel.app/admin/update',data).then((res)=>{
             console.log(res.data.message)
             alert('Data edited!')
             })

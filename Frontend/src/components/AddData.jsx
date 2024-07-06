@@ -27,7 +27,7 @@ const AddData = () => {
       return;
     }
 
-    axiosInstance.post('http://localhost:3000/admin/add', data).then((res)=>{
+    axiosInstance.post('https://employee-app-server-delta.vercel.app/admin/add', data).then((res)=>{
       console.log(res.data.message)
       alert('Data added successfully')
 

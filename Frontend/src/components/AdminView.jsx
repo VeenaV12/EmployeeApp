@@ -12,13 +12,13 @@ const AdminView = () => {
   const [selectedData, setSelectedData] = useState([])
 
   useEffect(()=>{
-          axiosInstance.get('http://localhost:3000/admin/get').then((res)=>{
+          axiosInstance.get('https://employee-app-server-delta.vercel.app/admin/get').then((res)=>{
             setData(res.data)
           })
   },[])
 
   function deleteData(itemId) { 
-    axiosInstance.delete(`http://localhost:3000/admin/delete/${itemId}`)
+    axiosInstance.delete(`https://employee-app-server-delta.vercel.app/admin/delete/${itemId}`)
         .then((res) => {
             alert(res.data.message);
             const updatedData = data.filter((item) => item._id !== itemId)

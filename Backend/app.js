@@ -7,20 +7,14 @@ const adminRoute = require('./Routes/adminRoute')
 const app = express()
 app.use(cors())
 
-/*app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://employee-app-client.vercel.app'); // Allow requests from your frontend origin
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow common HTTP methods
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');// Allow common headers
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
-});*/
+});
 
-const corsOptions = {
-  origin: 'https://employee-app-client.vercel.app',//(https://your-client-app.com)
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions))
 
 app.use('/user',userRoute)
 app.use('/admin',adminRoute)

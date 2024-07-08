@@ -14,7 +14,7 @@ const AdminLogin = () => {
   })
 
   function capValue(){
-    axios.post('https://employee-app-server-delta.vercel.app/admin/login', form).then((res)=>{
+    axios.post('https://employee-app-server/admin/login', form).then((res)=>{
       alert(res.data.message)
       if(res.data.token){
       localStorage.setItem('token',res.data.token)

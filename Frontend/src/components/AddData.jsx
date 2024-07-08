@@ -1,6 +1,6 @@
-import { Box, Button, Container, Grid, Link, TextField, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import axiosInstance from '../axiosInterceptor';
+import { Box, Button, Container, Grid, Link, TextField, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import axiosInstance from '../axiosInterceptor'
 
 
 
@@ -15,15 +15,15 @@ const AddData = () => {
   })
 
   const inputHandler = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value })
   }
 
   function addData(){
 
-    const isEmpty = Object.values(data).some((field) => field.trim() === '');
+    const isEmpty = Object.values(data).some((field) => field.trim() === '')
 
     if (isEmpty) {
-      alert('Please fill in all required fields before submitting.');
+      alert('Please fill in all required fields before submitting.')
       return;
     }
 

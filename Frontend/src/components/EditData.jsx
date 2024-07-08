@@ -9,7 +9,7 @@ const EditData = () => {
     const [data, setData] = useState(location.state?.item || {})
 
     const inputHandler = (e) => {
-        setData({ ...data, [e.target.name]: e.target.value });
+        setData({ ...data, [e.target.name]: e.target.value })
       }
 
 

@@ -31,7 +31,7 @@ const UserView = () => {
     const [data,setData] = useState([])
 
     useEffect(()=>{
-        axiosInstance.get('https://employee-app-server-delta.vercel.app/user/get').then((res)=>{
+        axiosInstance.get('http://localhost:3000/user/get').then((res)=>{
           setData(res.data)
         })
 },[])
